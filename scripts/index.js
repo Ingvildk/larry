@@ -12,7 +12,7 @@ import ReactBootstrap from 'react-bootstrap';
 var {Button, Panel }=ReactBootstrap;
 
 class SubComponent extends React.Component {
-      
+
       render() {
         var message=this.props.imessage;
         return (
@@ -45,7 +45,7 @@ class MessageBox extends React.Component {
           messages: texts,
           val: " "
         });
-      }      
+      }
 
       constructor(props) {
         super(props);
@@ -59,21 +59,21 @@ class MessageBox extends React.Component {
           var Button = ReactBootstrap.Button;
           var that = this;
           var count=0;
-          
+
           var subMessage = this.state.messages.map(function(imessage,index) {
             count++;
             return (<SubComponent onClick={that.handleDelete.bind(that, imessage)} imessage= {imessage} key={count}></SubComponent>
               );
-          });    
+          });
     return(
 
               <div>
-              <ReactBootstrap.Input 
-                type="text" 
-                ref="rex" 
-                value={this.state.val} 
-                onChange={this.changeHandler.bind(this)} 
-                placeholder={this.props.defaultText} 
+              <ReactBootstrap.Input
+                type="text"
+                ref="rex"
+                value={this.state.val}
+                onChange={this.changeHandler.bind(this)}
+                placeholder={this.props.defaultText}
                 autofocus />
               <Button bsStyle='success' onClick={this.handleAdd.bind(this)}>Add</Button>
               <br/>
@@ -81,8 +81,8 @@ class MessageBox extends React.Component {
               <ul>
               { subMessage }
               </ul>
-            </div> );      
-      
+            </div> );
+
   }
 };
 
@@ -91,9 +91,9 @@ class App extends React.Component{
     render() {
 	  return (
       <div className="App">
-         <NavBar /> 
+         <NavBar />
          <div className='container'x>
-           <RouteHandler/>
+           <RouteHandler {...this.props}/>
          </div>
         </div>
     )}
@@ -105,9 +105,10 @@ var routes = (
   <Route handler={App} name='App' path='/'>
     <Route handler={Blog} name='Blog' path='/blog'/>
     <Route handler={FrontPage} name='FrontPage' path='/frontpage' />
-    <Route handler={Shop} name='Shop' path='/shop' >
-    <Route handler={ProductPage} name='ProductPage' path='/shop/:productId' />
-    </Route>
+    <Route handler={Shop} name='Shop' path='/shop' />
+
+    <Route handler={ProductPage} name='ProductPage' path='/product/:id' />
+
   </Route>
 );
 
