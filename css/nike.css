@@ -1,0 +1,35 @@
+#bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  max-width: 100px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 60px;
+  left: 0;
+}
+
+
+span {
+  display: block;
+}
+
+
+/*
+#elem{
+	background:url('./images/nike4.jpg') center center no-repeat;
+	background-size:900px 500px; 
+	position:relative;
+	width: 1300px;
+	height:700px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:60px;
+    height:auto;
+}
+*/
