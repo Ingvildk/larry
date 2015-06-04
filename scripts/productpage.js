@@ -14,15 +14,16 @@ export default class ProductPage extends React.Component {
     }
 
     componentDidMount() {
-
+//store verdiene i dataen får en onChange fuction bundet på seg, hver gang change skjer call onChange hos denne komponenten 
         ProductStore.listen(this.onChange.bind(this));
+//setter inn de nye componentene         
         ProductActions.fetchProducts();
     }
 
     componentWillUnmount() {
         ProductStore.unlisten(this.onChange.bind(this));
     }
-
+// state er verdiene hos ProductStore setter disse verdiene som ny state hos denne komponenten
     onChange(state) {
         this.setState(state);
     }
