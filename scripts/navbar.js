@@ -1,8 +1,6 @@
 import React from 'react';
-//import App from './App';
 import Router from 'react-router';
-
-
+import CheckoutStore from './stores/CheckoutStore';
 var { Route, DefaultRoute, RouteHandler, Link } = Router;
 
 import ReactBootstrap from 'react-bootstrap';

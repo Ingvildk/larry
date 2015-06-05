@@ -106,9 +106,7 @@ var routes = (
     <Route handler={Blog} name='Blog' path='/blog'/>
     <Route handler={FrontPage} name='FrontPage' path='/frontpage' />
     <Route handler={Shop} name='Shop' path='/shop' />
-
     <Route handler={ProductPage} name='ProductPage' path='/product/:id' />
-
   </Route>
 );
 
