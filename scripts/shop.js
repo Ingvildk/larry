@@ -25,7 +25,7 @@ export default class Shop extends React.Component {
 
     onChange(state) {
         this.setState(state);
-    }    	
+    }
 
 	render() {
 		var count = 0;
@@ -65,9 +65,9 @@ export default class Shop extends React.Component {
 				<Button id="vismer"bsStyle='primary' onClick={this.showMoreHandler	}>Vis mer </Button>
 				<br/>
 				<br/>
-				</div>							    	
+				</div>
 		    	);
-			}	
+			}
 	}
 };
 

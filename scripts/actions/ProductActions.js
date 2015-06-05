@@ -18,9 +18,6 @@ class ProductActions {
                 // we can access other actions within our action through `this.actions`
                 this.actions.updateProducts(products);
             })
-            .catch((errorMessage) => {
-                this.actions.productsFailed(errorMessage);
-            });
     }
 
     productsFailed(errorMessage) {
