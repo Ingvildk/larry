@@ -5,7 +5,7 @@ import ProductStore from './stores/ProductStore';
 import ProductActions from './actions/ProductActions';
 
 var { Route, DefaultRoute, RouteHandler, Link } = Router;
-var { Col, Grid, Row, Button, Thumbnail } = ReactBootstrap;
+var { Col, Grid, Row, Button, Thumbnail, Glyphicon } = ReactBootstrap;
 
 export default class Shop extends React.Component {
 

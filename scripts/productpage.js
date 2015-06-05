@@ -43,9 +43,7 @@ export default class ProductPage extends React.Component {
         if(typeof product === 'undefined'){
             return (<p>LOADING</p>);
         } else {
-          var chart = CheckoutStore.getState().buyProducts.length;
-          console.log(chart);
-            return (
+          return (
                 <div>
                   <Grid>
                     <Row>
@@ -56,9 +54,7 @@ export default class ProductPage extends React.Component {
                       <Col xs={2} md={2} >  
                             <p id="title"><b>{product.name}</b></p>
                             <p>{product.price}</p>
-                            
                             <Button bsStyle="success" onClick={this.addHandler.bind(this, product)}>Add to Chart</Button>
-                            {chart.buyProducts}
                       </Col>         
                     </Row>
                   </Grid>

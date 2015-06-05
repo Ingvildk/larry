@@ -18,10 +18,17 @@ span {
   display: block;
 }
 
-p #title {
-  font-size: 155px;
+#productText {
+  font-size: 30px;
 }
 
+span #shopping {
+  background-image: url("/images/shopping-cart.ico"); 
+}
+
+#chart {
+display:inline;
+}
 
 /*
 #elem{
