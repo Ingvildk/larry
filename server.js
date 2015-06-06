@@ -21,6 +21,9 @@ var app = express();
 app.use('/api', proxy(url.parse('http://localhost:5000/api/')));
 app.use('/scripts', proxy(url.parse('http://localhost:3000/scripts')));
 app.use('/images', proxy(url.parse('http://localhost:3000/images')));
+app.use('/css', proxy(url.parse('http://localhost:3000/css')));
+app.use('/js', proxy(url.parse('http://localhost:3000/js')));
+app.use('/fonts', proxy(url.parse('http://localhost:3000/fonts')));
 
 
 
