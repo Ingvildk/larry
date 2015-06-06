@@ -8,16 +8,15 @@ class ProductActions {
     }
 
     fetchProducts() {
-
-        console.log("FEEEEEEEEETCH");
         // we dispatch an event here so we can have "loading" state.
         this.dispatch();
-
+        var that = this;
         ProductsFetcher.fetch()
-            .then((products) => {
+            .then(function(products) {
                 // we can access other actions within our action through `this.actions`
-                this.actions.updateProducts(products);
-            })
+                that.actions.updateProducts(products);
+            });
+
     }
 
     productsFailed(errorMessage) {

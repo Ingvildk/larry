@@ -5,9 +5,9 @@ import Blog from './blog';
 import Shop from './shop';
 import ProductPage from './productpage';
 
-//import App from './App';
 import Router from 'react-router';
 var { Route, DefaultRoute, RouteHandler, Link } = Router;
+
 import ReactBootstrap from 'react-bootstrap';
 var {Button, Panel }=ReactBootstrap;
 
