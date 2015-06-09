@@ -10,7 +10,7 @@ class SingleActions {
 	fetchProduct(id) {
 		this.dispatch(id);
 		var that = this;
-		ProductsFetcher.fetch(id)
+		ProductsFetcher.singlefetch(id)
 			.then(function(product) {
 				that.actions.updateProduct(product);
 			});

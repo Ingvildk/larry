@@ -7,8 +7,10 @@ var ProductsFetcher = {
         return request;
     },
 
-    singlefetch: function(id) {
-    	var response = $.post("/api/alicia", id);
+    singlefetch: function(ID) {
+    	console.log("before get request");
+    	var response = $.get("/api/alicia/" + ID );
+    	console.log("inside ProductsFetcher");
     	return response;
     }
 };
