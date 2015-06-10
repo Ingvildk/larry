@@ -16,15 +16,13 @@ class ProductActions {
                 // we can access other actions within our action through `this.actions`
                 that.actions.updateProducts(products);
             });
-
     }
+
+    
 
     productsFailed(errorMessage) {
         this.dispatch(errorMessage);
     }
-
-
-
 }
 
 export default alt.createActions(ProductActions);

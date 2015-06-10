@@ -5,6 +5,8 @@ import ProductStore from './stores/ProductStore';
 import ProductActions from './actions/ProductActions'
 import SingleActions from './actions/SingleAction';
 import SingleStore from './stores/SingleStore';
+import CheckoutStore from './stores/CheckoutStore';
+import CheckoutActions from './actions/CheckoutActions';
 
 var {Route, DefaultRoute, RouteHandler, Link} = Router;
 var { Col, Grid, Row, Button, Thumbnail } = ReactBootstrap;
@@ -18,14 +20,22 @@ export default class ProductPage extends React.Component {
     componentDidMount() {
         var id = this.context.router.getCurrentParams().id;
         SingleStore.listen(this.onChange.bind(this));
-        ProductActions.fetchProducts(id);
+        SingleActions.fetchProduct(id);
     }
 
     onChange(state) {
         this.setState(state);
     }
 
+    addHandler(product) {
+        CheckoutActions.addProduct(product);
+        var cartButton = document.getElementById('addTocart');
+        cartButton.textContent = "successfully added to cart";
+
+    }
+
     render() {
+        var product = this.state.product;
         if(typeof product === 'undefined'){
             return (<p>LOADING</p>);
         } else {
@@ -40,7 +50,9 @@ export default class ProductPage extends React.Component {
                       <Col xs={2} md={2} >  
                             <p id="title"><b>{product.name}</b></p>
                             <p>{product.price}</p>
-                            <Button bsStyle="success" onClick={this.addHandler.bind(this, product)}>Add to Chart</Button>
+                            <div id="addTocart">
+                            <Button bsStyle="success" onClick={this.addHandler.bind(this, product)} >Add to Chart</Button>
+                            </div>
                       </Col>         
                     </Row>
                   </Grid>

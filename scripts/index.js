@@ -4,6 +4,7 @@ import FrontPage from './frontpage';
 import Blog from './blog';
 import Shop from './shop';
 import ProductPage from './productpage';
+import Cart from './checkout';
 
 import Router from 'react-router';
 var { Route, DefaultRoute, RouteHandler, Link } = Router;
@@ -107,6 +108,7 @@ var routes = (
     <Route handler={FrontPage} name='FrontPage' path='/frontpage' />
     <Route handler={Shop} name='Shop' path='/shop' />
     <Route handler={ProductPage} name='ProductPage' path='/product/:id' />
+    <Route handler={Cart} name='Cart' path='/cart' />
   </Route>
 );
 

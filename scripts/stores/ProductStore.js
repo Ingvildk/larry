@@ -14,8 +14,6 @@ class ProductStore {
     }
 
     handleUpdateproducts(products) {
-        console.log("Done updating");
-        console.log(products);
         this.products = products;
         this.errorMessage = null;
     }

@@ -19,7 +19,7 @@ export default class FrontPage extends React.Component {
   render() {
     return (
     	<div id='bg'>
-			<img src="./images/bg2.jpg" id="elem" className="bg"/>
+			<img src="./images/bg3.jpg" id="elem" className="bg"/>
 		</div>
     );
   }   

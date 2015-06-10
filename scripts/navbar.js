@@ -27,11 +27,10 @@ export default class NavBar extends React.Component {
 	render() {
         var count = 0;
         var chart = this.state.buyProducts;
-        console.log(chart.name);
         var dropdowns = chart.map(function(elem, index) {
-            console.log(elem.name);
+            count++;
             return(
-                <MenuItem eventKey={count}> {elem.name} </MenuItem>
+                <MenuItem eventKey={elem.id} key={count}> {elem.id} </MenuItem>
                 );
             })
 		return (
@@ -40,7 +39,7 @@ export default class NavBar extends React.Component {
                     <NavItemLink to='FrontPage' eventKey={1} href='#'>Hjem</NavItemLink>
                     <NavItemLink to='Blog'eventKey={2} href='#'>Blog</NavItemLink>
                     <NavItemLink to='Shop' eventKey={3} href='#'>Shop</NavItemLink>
-                    <NavItemLink to='FrontPage'> <Glyphicon glyph='shopping-cart' id="chart"/> </NavItemLink>
+                    <NavItemLink to='Cart' eventKey={4}> <Glyphicon glyph='shopping-cart' id="chart"/> </NavItemLink>
                     <DropdownButton eventKey={5} title={chart.length}>
                       { dropdowns }
                     </DropdownButton>

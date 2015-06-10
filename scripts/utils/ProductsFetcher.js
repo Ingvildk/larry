@@ -1,5 +1,6 @@
 import $ from 'jquery';
 
+
 var ProductsFetcher = {
 
     fetch: function() {
@@ -8,11 +9,17 @@ var ProductsFetcher = {
     },
 
     singlefetch: function(ID) {
-    	console.log("before get request");
     	var response = $.get("/api/alicia/" + ID );
-    	console.log("inside ProductsFetcher");
     	return response;
+    },
+
+    addfetch: function(product) {
+    	var r = $.post("/api/alicia/cart", JSON.stringify(product));
+    	console.log("Success");
+    	return "Successfully added to chart";
     }
+
+
 };
 
 export default ProductsFetcher;

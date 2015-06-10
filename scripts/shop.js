@@ -47,7 +47,6 @@ export default class Shop extends React.Component {
 				    			    src={dict.img}
 				    			    key={count} />
 				    			</Link>
-
 				    			<b>{dict.name}</b>
 				    			<span>{dict.category}</span>
 				    			<span>{dict.price}</span>

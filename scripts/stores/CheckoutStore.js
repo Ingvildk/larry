@@ -7,17 +7,17 @@ class CheckoutStore {
 		this.errorMessage = null;
 
 	this.bindListeners({
-        handleAddproducts: CheckoutActions.addProduct
+        handleAddproducts: CheckoutActions.ADD_PRODUCT
 	});
 	}
 
     handleAddproducts(product) { 	
         this.buyProducts = this.buyProducts.concat([product]);
         this.errorMessage = null;
+        console.log(this.buyProducts);
     }
 
     getCheckoutProducts() {
-    	console.log(this.buyProducts);
     	return (this.buyProducts);
     }
 
