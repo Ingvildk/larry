@@ -40,7 +40,8 @@ export default class NavBar extends React.Component {
                     <NavItemLink to='Blog'eventKey={2} href='#'>Blog</NavItemLink>
                     <NavItemLink to='Shop' eventKey={3} href='#'>Shop</NavItemLink>
                     <NavItemLink to='Cart' eventKey={4}> <Glyphicon glyph='shopping-cart' id="chart"/> </NavItemLink>
-                    <DropdownButton eventKey={5} title={chart.length}>
+                    <NavItemLink to='VideoPlayer' eventKey={5} href='#'>VideoPlayer</NavItemLink>
+                    <DropdownButton eventKey={6} title={chart.length}>
                       { dropdowns }
                     </DropdownButton>
                 </Nav>

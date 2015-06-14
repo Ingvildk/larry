@@ -4,6 +4,9 @@ import ReactBootstrap from 'react-bootstrap';
 import ProductStore from './stores/ProductStore';
 import ProductActions from './actions/ProductActions';
 import CheckoutStore from './stores/CheckoutStore';
+import CheckoutActions from './actions/CheckoutActions';
+
+var { Button } = ReactBootstrap;
 
 export default class Cart extends React.Component {
 
@@ -18,6 +21,10 @@ export default class Cart extends React.Component {
 
     onChange(state) {
         this.setState(state);
+    }
+
+    buyHandler() {
+        CheckoutActions.buyProducts();
     }
 
     render() {
@@ -36,6 +43,7 @@ export default class Cart extends React.Component {
                 <ul>
                     {cart}
                 </ul>
+                <Button bsStyle='success' onClick={this.buyHandler.bind(this)}>Send inn bestilling</Button>
             </div>
     		);
     }

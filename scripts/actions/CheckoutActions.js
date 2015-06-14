@@ -8,6 +8,13 @@ class CheckoutActions {
 		this.dispatch(product);
 		ProductsFetcher.addfetch(product);
 	}
+
+	buyProducts() {
+		console.log('running CheckoutActions buyProduct');
+		this.dispatch();
+		ProductsFetcher.buyfetch();
+	}	
+
 }
 
 export default alt.createActions(CheckoutActions);

@@ -7,12 +7,12 @@ class SingleStore {
 		this.errorMessage = null;
 
 	this.bindListeners ({
-		handleUpdateproduct: SingleActions.UPDATE_PRODUCT
+		handleUpdateproduct: SingleActions.UPDATE_PRODUCT,
 	});
  }
 
 	handleUpdateproduct(product) {
-		console.log("SingleStore is running");
+		console.log("SingleStoreis running");
 		this.product = product;
 		this.errorMessage = null;
 	}

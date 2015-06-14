@@ -15,10 +15,13 @@ var ProductsFetcher = {
 
     addfetch: function(product) {
     	var r = $.post("/api/alicia/cart", JSON.stringify(product));
-    	console.log("Success");
     	return "Successfully added to chart";
-    }
+    },
 
+    buyfetch: function() {
+        var request = $.get("/api/alicia/buy");
+        console.log("running buyfetch");
+    }
 
 };
 
